@@ -1,2 +1,4 @@
 <button (click)="vediDati()">Vedi i dati</button>
-<div *ngIf="yeah">{{mante}}</div>
+<div *ngIf="yeah">
+    <div *ngFor="let m of mante">{{m.nome_specie}}</div>
+</div>
