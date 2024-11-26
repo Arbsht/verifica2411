@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 export class AppComponent implements OnInit{
   
   title = 'f-end';
+  yeah = false;
   mante: any[] = [];
     // Inject HttpClient into your component or service.
     constructor(private http: HttpClient) {}
@@ -24,6 +25,10 @@ export class AppComponent implements OnInit{
       this.mante = data['mante'];
       console.log(data);
     });
+  }
+
+  vediDati() {
+    this.yeah = true;
   }
 
 }
