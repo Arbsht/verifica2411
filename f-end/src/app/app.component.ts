@@ -14,7 +14,8 @@ import { Mante } from './mante.model';
 export class AppComponent implements OnInit{
   
   title = 'f-end';
-  yeah = false;
+  estinzione = false;
+  nonestinzione = false;
   mante: Mante[] = [];
     // Inject HttpClient into your component or service.
     constructor(private http: HttpClient) {}
@@ -34,8 +35,22 @@ export class AppComponent implements OnInit{
       });
   }
 
-  vediDati() {
-    this.yeah = true;
+  vediEstinzione() {
+    if (this.estinzione == true) {
+      this.estinzione = false
+    }
+    else {
+      this.estinzione = true;
+    }
+  }
+
+  vediNonEstinzione() {
+    if (this.nonestinzione == true) {
+      this.nonestinzione = false
+    }
+    else {
+      this.nonestinzione = true;
+    }
   }
 
 }
