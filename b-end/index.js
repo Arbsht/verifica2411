@@ -19,6 +19,10 @@ app.get('/css/stile.css', function (req, res) {
     app.use('/', express.static(__dirname + "/"));
     res.sendFile(path.join(__dirname,'www/css/stile.css'));
     });
+app.get('/api/mante', function (req, res) {
+    app.use('/', express.static(__dirname + "/"));
+    res.sendFile(path.join(__dirname,'www/mante.json'));
+    });
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!');
 });
